@@ -47,3 +47,14 @@ module "ec2_instance" {
 - subnet_id
 - ami_id
 - number_of_instances
+
+Authors
+=======
+
+Created and maintained by [Brandon Burton](https://github.com/solarce)
+(brandon@inatree.org).
+
+License
+=======
+
+Apache 2 Licensed. See LICENSE for full details.
