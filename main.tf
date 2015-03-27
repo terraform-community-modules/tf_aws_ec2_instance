@@ -11,6 +11,7 @@ resource "aws_instance" "ec2_instance" {
     count = "${var.number_of_instances}"
     subnet_id = "${var.subnet_id}"
     instance_type = "${var.instance_type}"
+    user_data = "${file(var.user_data)}"
     tags {
         created_by = "${lookup(var.tags,"created_by")}"
         // Takes the instance_name input variable and adds
