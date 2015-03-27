@@ -14,6 +14,7 @@ Module Input Variables
 - `instance_type` - The EC2 instance type, e.g. m1.small
 - `instance_name` - The instance name you want, this is used to populate
     the Name tag.
+- `user_data` - The path to the user_data file. Terraform will include the contents of this file while launching the instance
 - `tags` - A map for setting AWS tags.
 
 Usage
@@ -33,7 +34,8 @@ module "ec2_instance" {
   aws_secret_key = "${var.aws_secret_key}"
   aws_region = "${var.aws_region}"
   subnet_id = "${var.subnet_id}"
-  number_of_instances = "${number_of_instances}"  
+  number_of_instances = "${var.number_of_instances}"
+  user_data = "{var.user_data}"
 }
 ```
 
