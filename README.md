@@ -10,7 +10,7 @@ Module Input Variables
 
 - `ami_id` - The AMI to use
 - `number_of_instances`  - The number of instances you want made
-- `subnet_id - The VPC subnet to place the instance in
+- `subnet_id` - The VPC subnet to place the instance in
 - `instance_type` - The EC2 instance type, e.g. m1.small
 - `instance_name` - The instance name you want, this is used to populate
     the Name tag.
@@ -35,7 +35,7 @@ module "ec2_instance" {
   aws_region = "${var.aws_region}"
   subnet_id = "${var.subnet_id}"
   number_of_instances = "${var.number_of_instances}"
-  user_data = "{var.user_data}"
+  user_data = "${var.user_data}"
 }
 ```
 
