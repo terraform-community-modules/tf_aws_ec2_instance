@@ -26,7 +26,7 @@ You can use this in your terraform template with the following steps.
 
 ```
 module "ec2_instance" {
-  source = "github.com/solarce/tf_aws_ec2_instance"
+  source = "github.com/terraform-community-modules/tf_aws_ec2_instance"
   instance_type = "${var.instance_type}"
   instance_name = "${var.instance_name}"
   ami_id = "${var.ami_id}"
