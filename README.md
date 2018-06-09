@@ -16,6 +16,10 @@ Module Input Variables
     the Name tag.
 - `user_data` - The path to the user_data file. Terraform will include the contents of this file while launching the instance
 - `tags` - A map for setting AWS tags.
+- `public_ip` - Enable of Disable public IP.
+- `volume_type` - The Volume type, e.g. gp2.
+- `volume_size` - The Volume size, e.g. 13GB.
+- `volume_delete` - delete volume on instance termination.
 
 Usage
 -----
@@ -36,6 +40,10 @@ module "ec2_instance" {
   subnet_id = "${var.subnet_id}"
   number_of_instances = "${var.number_of_instances}"
   user_data = "${var.user_data}"
+  associate_public_ip_address = "${var.public_ip}"
+  volume_type = "${var.volume_type}"
+  volume_size = "${var.volume_size}"
+  delete_on_termination = "${var.volume_delete}"
 }
 ```
 
@@ -49,6 +57,10 @@ module "ec2_instance" {
 - subnet_id
 - ami_id
 - number_of_instances
+- associate_public_ip_address
+- volume_type
+- volume_size
+- delete_on_termination
 
 Authors
 =======

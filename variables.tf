@@ -34,11 +34,15 @@ variable "public_ip" {
 }
 
 variable "volume_type" {
-  description = "type of volume you want to use ie. gp2"
+  description = "The type of volume. Can be 'standard', 'gp2', or 'io1'. (Default: 'standard')."
 }
 
 variable "volume_size" {
-  description = "size of volume by default its 8GB"
+  description = "The size of the volume in gigabytes."
+}
+
+variable "volume_delete" {
+  description = "Whether the volume should be destroyed on instance termination (Default: true)."
 }
 
 // Variables for providers used in this module
