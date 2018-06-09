@@ -29,6 +29,18 @@ variable "tags" {
   }
 }
 
+variable "public_ip" {
+  description = "enable or disable publicip"
+}
+
+variable "volume_type" {
+  description = "type of volume you want to use ie. gp2"
+}
+
+variable "volume_size" {
+  description = "size of volume by default its 8GB"
+}
+
 // Variables for providers used in this module
 variable "aws_access_key" {}
 
