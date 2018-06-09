@@ -16,7 +16,7 @@ variable "ami_id" {
 
 variable "number_of_instances" {
   description = "number of instances to make"
-  default = 1
+  default     = 1
 }
 
 variable "user_data" {
@@ -26,10 +26,27 @@ variable "user_data" {
 variable "tags" {
   default = {
     created_by = "terraform"
- }
+  }
+}
+
+variable "public_ip" {
+  description = "enable or disable publicip"
+}
+
+variable "volume_type" {
+  description = "The type of volume. Can be 'standard', 'gp2', or 'io1'. (Default: 'standard')."
+}
+
+variable "volume_size" {
+  description = "The size of the volume in gigabytes."
+}
+
+variable "volume_delete" {
+  description = "Whether the volume should be destroyed on instance termination (Default: true)."
 }
 
 // Variables for providers used in this module
 variable "aws_access_key" {}
+
 variable "aws_secret_key" {}
 variable "aws_region" {}
