@@ -1,6 +1,12 @@
 ec2_instance terraform module
 =======================
 
+# This module is deprecated and [terraform-aws-modules/terraform-aws-ec2-instance module](https://github.com/terraform-aws-modules/terraform-aws-ec2-instance) published on [the Terraform registry](https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws) should be used instead.
+
+## This repository will not have active support any more.
+
+---
+
 A terraform module for making ec2 instances.
 * Assumes you're making your instances in a VPC.
 * Does not do any block device configuration (yet)
